@@ -1,0 +1,16 @@
+{
+  "name": "tgclub",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "node-sass": "^4.6.0",
+    "nodemon": "^1.12.1"
+  }
+}
