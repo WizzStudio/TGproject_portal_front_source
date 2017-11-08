@@ -6,11 +6,19 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
     "pug": "^2.0.0-rc.4"
+  },
+  "scripts": {
+    "dev": " concurrently -k -p \"[{name}]\" -n \"SCSS,Server\" -c \"green.bold,cyan.bold\" \"npm run watch-sass\" \"npm run serve\"",
+    "serve": "nodemon ./src/server.js",
+    "watch-sass": "node-sass -w src/public/css/main.scss dist/public/css/main.css",
+    "test": "node-sass"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "node-sass": "^4.6.0",
+    "node-sass": "^4.5.2",
     "nodemon": "^1.12.1"
   }
 }
