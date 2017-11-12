@@ -1,0 +1,25 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title TG.CLUB
+		link(rel='stylesheet', type="text/css", href="/css/main.css")
+		block head
+		style.
+			/*.cont{*/
+				/*margin-top: 6rem;*/
+			/*}*/
+	body
+		include components/header
+
+
+		.cont
+			.container
+			block content
+
+		include components/footer
+
+	script(src='/js/lib/jquery-3.1.1.min.js')
+	script(src='/js/lib/bootstrap.min.js')
+	block foot

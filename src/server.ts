@@ -30,12 +30,34 @@ app.use(expressValidator());
 
 
 
+
 /**
  * express get to render configuration
  */
+// app.param('id',(req,res,next,id)=>{
+//     next()
+// })
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('broadcast',{active:'broadcast'})
 });
+app.get('/broadcast', (req, res) => {
+    res.render('broadcast',{active:'broadcast'})
+});
+app.get('/home', (req, res) => {
+    res.render('home',{active:'home'})
+});
+app.get('/projects', (req, res) => {
+    res.render('projects',{active:'projects'})
+});
+app.get('/department', (req, res) => {
+    res.render('department',{active:'department'})
+});
+app.get('/contact', (req, res) => {
+    res.render('contact',{active:'contact'})
+});
+// app.get('/test/:id', (req, res) => {
+//     res.render('home')
+// });
 
 
 

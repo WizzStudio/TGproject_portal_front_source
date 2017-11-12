@@ -1,0 +1,25 @@
+@import "utils";
+.home{
+  &-banner{
+    @include wh(auto,600px);
+    padding: 200px;
+    background: url("/images/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    //background-position-y:-200px;
+    &-text{
+      position: relative;
+    }
+    .musk{
+      @include wh(100%,100%);
+      background: rgba(12,12,12,.4);
+    }
+    .homeTitle{
+      @include fontSizeColor(6rem,#fff)
+    }
+    .homeSubTitle{
+      margin-top: -26px;
+      @include fontSizeColor(2rem, #ffffff)
+    }
+  }
+}
