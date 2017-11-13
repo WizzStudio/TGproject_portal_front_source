@@ -17,10 +17,20 @@
       @include fontSizeColor($font-2nd,lighten($fontClr_1st,10%))
     }
     &-intro{
-      @include fontSizeColor($font-3rd,$fontClr_2nd)
+
+      @include fontSizeColor($font-3rd,lighten($fontClr_1st,28%))
     }
   }
-  &-author{}
+  &-author{
+    @include fontSizeColor($font-3rd,lighten($fontClr_1st,12%));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 10px;
+    border: solid $border;
+    border-width: 1px 0 0 0;
+    height: 40px;
+  }
 }
 
 .focusProjItem:hover{
