@@ -1,3 +1,44 @@
+$border:#d9d9d9;
+$placeholder_bg: #b5b5b5;
+$placeholder_text: #c3c3c3;
+$bg: #b3b3b3;
+
+
+$font-1st:22px;
+$font-2nd:16px;
+$font-3rd:14px;
+
+
+$orange: #f4a100; // 主题橙色
+$yellow: #ffd944; // 主题黄色
+$border: #dcdcdc; // 描边色
+$bg_wht: #f5f5f5; // 背景色白
+$bg_gry: #36393d; // 背景色灰
+
+$fontClr_main: #231815; //主要字体色
+$fontClr_1st: #333333; // 一级提示
+$fontClr_2nd: #969696; // 二级提示
+$fontClr_3rd: #b9b9b9; // 三级提示
+$fontClr_ble: #3d82f7; // 字体蓝
+$fontClr_red: #f76162; // 字体红
+
+$prg_font: #333333; // 进度条提示文字
+$prg_gry: #e4e4e4; // 进度条灰
+$prg_org: #f4a100; // 进度条橙
+
+$btn_gry: #dcdcdc; // 按钮灰
+$btn_gry_d: #b9b9b9; // 按钮灰
+$btn_ylo: #ffd944; // 按钮黄色
+$btn_org: #f4a100;
+$btn_wht: #ffffff; // 按钮白
+
+$bar_bg: #32373d; // 直播功能栏背景色
+$bar_focus: #23262b; // 功能栏选中
+
+$pre1: #666666; // 备用颜色1
+$pre2:#e4e4e4;
+
+
 // 水平居中盒子
 @mixin horMidBox {
   display: flex;

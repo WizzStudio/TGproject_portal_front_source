@@ -1,11 +1,21 @@
 @import "lib/bootstrap/bootstrap";  // 使用BootStrap
 @import "lib/font-awesome/font-awesome";  // 载入icon
 @import "normalize";  // 规范化默认样式
-@import "home";
+
+/*组件样式*/
+@import "components/newProjItem";
+@import "components/focusProjItem";
+
+/*页面样式*/
+@import "home"; //
 
 html{
   padding:0;
   margin: 0;
+}
+
+body{
+  background: #f7f7f7;
 }
 
 

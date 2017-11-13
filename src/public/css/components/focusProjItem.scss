@@ -1,0 +1,34 @@
+@import "../utils";
+.focusProjItem{
+  overflow: hidden;
+  transition: all ease-out .2s;
+  cursor: pointer;
+  height: 300px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid lighten($border,6%);
+  border-radius: 6px ;
+  &-pic{
+    height: 150px;
+  }
+  &-main{
+    padding: 10px;
+    &-title{
+      @include fontSizeColor($font-2nd,lighten($fontClr_1st,10%))
+    }
+    &-intro{
+      @include fontSizeColor($font-3rd,$fontClr_2nd)
+    }
+  }
+  &-author{}
+}
+
+.focusProjItem:hover{
+  transform: translate(0,-4px);
+  box-shadow: 4px 4px 6px darken($border,10%);
+
+}
+
+/*below pad width*/
+@media screen and (max-width: 694px ){
+}

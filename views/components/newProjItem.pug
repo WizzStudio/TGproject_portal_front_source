@@ -1,0 +1,16 @@
+// newProjects[i].intro
+
+- var picURL = "background:url('"+newProjects[i].pic+"');"
+
+.newProjItem
+	.newProjItem-pic(style=picURL)
+		.newProjItem-pic-info
+			.newProjItem-pic-info-text
+				p #{newProjects[i].title}
+			.newProjItem-pic-info-text
+				p.intro #{newProjects[i].intro}
+			.newProjItem-pic-info-text
+				p.intro #{newProjects[i].startTime.month}, #{newProjects[i].startTime.date} #{newProjects[i].startTime.year}
+				p #{newProjects[i].leader}
+
+

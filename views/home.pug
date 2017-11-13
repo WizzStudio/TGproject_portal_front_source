@@ -2,7 +2,37 @@ extends layout
 
 block content
 	section.home-banner
-		.container.home-banner-text
+		.home-banner-text
 			.musk
-				h1.text-center.homeTitle Tinny Projects Makes Talent.
-				h3.text-center.homeSubTitle 微创造，成就科技人才
+				p.text-center.homeTitle Tinny Projects Makes Talent.
+				p.text-center.homeSubTitle 微创造，成就科技人才
+	.container.home-nav
+		.row
+			.col-lg-3.col-md-3.col-xs-3.home-nav-item
+				a(href="") 进行中
+			.col-lg-3.col-md-3.col-xs-3.home-nav-item
+				a(href="") 已完成
+			.col-lg-3.col-md-3.col-xs-3.home-nav-item
+				a(href="") 精品陈列
+			.col-lg-3.col-md-3.col-xs-3.home-nav-item
+				a(href="") 微项目
+	.container.home-proj
+		.row
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12.center-block
+				h1.center-block Newest: 最新项目
+		.row
+			- for (var i=0;i<newProjects.length;i++)
+				.col-lg-6.col-sm-12.col-xs-12
+					include components/newProjItem
+
+	.container.home-proj
+		.row
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12.center-block
+				h1.center-block Focus: 焦点项目
+		.row
+			- for (var i=0;i<focusProjects.length;i++)
+				.col-lg-4.col-sm-12.col-xs-12
+					include components/focusProjItem
+	br
+	br
+	br

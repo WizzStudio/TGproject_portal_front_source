@@ -1,13 +1,14 @@
 @import "utils";
 .home{
   &-banner{
-    @include wh(auto,600px);
-    padding: 200px;
-    background: url("/images/bg3.jpg");
+    @include wh(100%,600px);
+    @include allMidBox();
+    background: url("/images/bg13.png");
     background-repeat: no-repeat;
     background-size: cover;
     //background-position-y:-200px;
     &-text{
+      width: 100%;
       position: relative;
     }
     .musk{
@@ -15,11 +16,72 @@
       background: rgba(12,12,12,.4);
     }
     .homeTitle{
-      @include fontSizeColor(6rem,#fff)
+      @include fontSizeColor(43px,#fff)
     }
     .homeSubTitle{
-      margin-top: -26px;
-      @include fontSizeColor(2rem, #ffffff)
+      margin-top: -16px;
+      @include fontSizeColor(28px, #ffffff)
+    }
+
+
+  }
+  &-nav{
+    width: 100%;
+    &-item{
+      @include allMidBox();
+
+      height: 40px;
+      border: solid $border;
+      border-width: 0 1px 1px 0;
+      cursor:pointer;
+      a:hover{
+        color: #555c62;
+        text-decoration: none;
+      }
+      a{
+        @include fontSizeColor(14px, #768088);
+      }
+    }
+  }
+  &-proj{
+    /*warning*/
+    //@include allMidBox();
+    margin-top: 40px;
+    h1{
+      display: block;
+      width: 200px;
+      @include fontSizeColor(22px,#2e2e2e);
+      font-weight: 400;
+      border: solid $border;
+      border-width: 0 0 1px 0;
+      padding-bottom: 14px;
     }
   }
 }
+
+
+
+/**/
+/**/
+/*below pad screen width*/
+@media screen and (max-width: 694px ){
+
+  .home{
+    &-banner{
+      &-text{
+        width: 200px;
+        position: relative;
+      }
+      .homeTitle{
+        display: block;
+        @include fontSizeColor(24px,#fff)
+      }
+      .homeSubTitle{
+        margin-top: 20px;
+        @include fontSizeColor(18px, #ffffff)
+      }
+    }
+  }
+
+}
+
