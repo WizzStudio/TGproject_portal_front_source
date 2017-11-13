@@ -150,7 +150,7 @@ let tempData = {
 //     next()
 // })
 app.get('/', (req, res) => {
-    res.render('broadcast', {active: 'broadcast'})
+    res.render('home', tempData)
 });
 app.get('/broadcast', (req, res) => {
     res.render('broadcast', {active: 'broadcast'})
