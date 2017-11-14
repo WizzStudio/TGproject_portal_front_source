@@ -142,6 +142,32 @@ let tempData = {
     ]
 }
 
+let categories = [
+    {
+        name: '进行中',
+        picURL: '/images/material-14.png'
+    },
+    {
+        name: '已完成',
+        picURL: '/images/material-10.png'
+    },
+    {
+        name: '精品陈列',
+        picURL: '/images/material-6.png'
+    },
+    {
+        name: '创意',
+        picURL: '/images/material-11.png'
+    },
+    {
+        name: '微项目',
+        picURL: '/images/material-16.png'
+    },
+    {
+        name: '闲逛',
+        picURL: '/images/material-3.png'
+    },
+]
 
 /**
  * express get to render configuration
@@ -159,7 +185,7 @@ app.get('/home', (req, res) => {
     res.render('home', tempData)
 });
 app.get('/categories', (req, res) => {
-    res.render('categories', {active: 'categories'})
+    res.render('categories', {active: 'categories',categories:categories})
 });
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department'})

@@ -1,8 +1,40 @@
 extends home
 
+//- var picURL = "background:url('"+categories[1].picURL+"');"
+
+
 block content
 	section.categories-banner
 		.categories-banner-text
+			.iconBox
+				i.fa.fa-gamepad
 			.musk
 				p.text-center.categoriesTitle 项目展览馆
 				p.text-center.categoriesSubTitle Project Repository
+	.container.categories-cateBox
+		.row
+			.col-lg-4
+				.categories-item(style="background-image:url('"+categories[0].picURL+"');")
+					.dark-overlay
+					p.categories-item-title #{categories[0].name}
+			.col-lg-4
+				.categories-item(style="background-image:url('" + categories[1].picURL + "');")
+					.dark-overlay
+					p.categories-item-title #{categories[1].name}
+			.col-lg-4
+				.categories-item(style="background-image:url('" + categories[2].picURL + "');")
+					.dark-overlay
+					p.categories-item-title #{categories[2].name}
+		.row
+			.col-lg-4
+				.categories-item(style="background-image:url('" + categories[3].picURL + "');")
+					.dark-overlay
+					p.categories-item-title #{categories[3].name}
+			.col-lg-4
+				.categories-item(style="background-image:url('" + categories[4].picURL + "');")
+					.dark-overlay
+					p.categories-item-title #{categories[4].name}
+			.col-lg-4
+				.categories-item(style="background-image:url('" + categories[5].picURL + "');")
+					.dark-overlay
+					p.categories-item-title #{categories[5].name}

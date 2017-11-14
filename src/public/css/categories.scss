@@ -7,10 +7,17 @@
     background: url("/images/material-8.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -50px;
+    background-position: 50% 50%;
+    //background-position-y: -50px;
     &-text{
       width: 100%;
       position: relative;
+      .iconBox{
+        @include allMidBox();
+        i{
+          @include fontSizeColor(80px,#fff)
+        }
+      }
     }
     .musk{
       @include wh(100%,100%);
@@ -27,4 +34,41 @@
       @include fontSizeColor(28px, #ffffff)
     }
   }
+  &-item{
+    @include allMidBox();
+    position: relative;
+    cursor:pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 180px;
+    border-radius: 6px;
+    background: #d1d0ca;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-title{
+      z-index: 999;
+      @include fontSizeColor(30px,#fff)
+    }
+    .dark-overlay{
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.43;
+      -webkit-transition: background-color 400ms ease;
+      transition: background-color 400ms ease;
+      text-shadow: none;
+    }
+  }
+  &-cateBox{
+    //margin-top: 50px;
+  }
 }
+
+
+/*独立样式*/

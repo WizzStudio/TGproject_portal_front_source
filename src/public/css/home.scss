@@ -13,7 +13,7 @@
       .fa-cubes{
         margin-top: -100px;
         display: block;
-        @include fontSizeColor(160px,$orange)
+        @include fontSizeColor(160px,#fff)
       }
       .iconBox{
         @include allMidBox();
