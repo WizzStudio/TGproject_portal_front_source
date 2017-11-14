@@ -53,7 +53,6 @@
       z-index: 999;
       @include fontSizeColor(24px, #fff)
     }
-
     .icon-hover {
       opacity: 0;
       @include wh(100%, 100%);
@@ -77,7 +76,7 @@
     .cateIcon {
       margin-bottom: 12px;
       z-index: 999;
-      @include fontSizeColor(40px, #fff)
+      @include fontSizeColor(80px, #fff)
     }
     /*it's a musk */
     .dark-overlay {

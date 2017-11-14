@@ -1,7 +1,10 @@
-a.categories-item(style="background-image:url('" + categories[i].picURL + "');", href="/test")
+- let icons=['fa-globe','fa-life-buoy','fa-gift','fa-lightbulb-o','fa-cube','fa-paper-plane']
+a.categories-item(style="background-image:url('" + categories[i].picURL + "');", href=`/categories/${categories[i].pathName}`)
 	.dark-overlay
-	i.fa.fa-lightbulb-o.cateIcon
+	i.fa.cateIcon(class=icons[i])
 	p.categories-item-title #{categories[i].name}
 	.icon-hover
 		- for(let i=0;i<9;i++)
 			span.dot
+
+			// globe life-buoy gift  cube  lightbulb-o paper-plane
