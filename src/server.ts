@@ -21,6 +21,7 @@ const port = process.env.PORT || 3000;
 /**
  * express global configuration
  */
+console.log(path.join(__dirname, "public"))
 app.set("views", path.join(__dirname, "../views"));  // 绑定MVC中的View层
 app.set("view engine", "pug");  // 使用渲染引擎
 app.use(logger("dev"));  // 使用express 自带 logger -Morgan /*dev common combined short tiny*/
@@ -145,27 +146,33 @@ let tempData = {
 let categories = [
     {
         name: '进行中',
-        picURL: '/images/material-14.png'
+        picURL: '/images/material-14.png',
+        pathName:'/inprogress'
     },
     {
         name: '已完成',
-        picURL: '/images/material-10.png'
+        picURL: '/images/material-10.png',
+        pathName:'/finished'
     },
     {
         name: '精品陈列',
-        picURL: '/images/material-6.png'
+        picURL: '/images/material-6.png',
+        pathName:'/'
     },
     {
         name: '创意',
-        picURL: '/images/material-11.png'
+        picURL: '/images/material-11.png',
+        pathName:''
     },
     {
         name: '微项目',
-        picURL: '/images/material-16.png'
+        picURL: '/images/material-16.png',
+        pathName:''
     },
     {
         name: '闲逛',
-        picURL: '/images/material-3.png'
+        picURL: '/images/material-3.png',
+        pathName:''
     },
 ]
 

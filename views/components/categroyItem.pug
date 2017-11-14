@@ -1,0 +1,7 @@
+a.categories-item(style="background-image:url('" + categories[i].picURL + "');", href="/test")
+	.dark-overlay
+	i.fa.fa-lightbulb-o.cateIcon
+	p.categories-item-title #{categories[i].name}
+	.icon-hover
+		- for(let i=0;i<9;i++)
+			span.dot

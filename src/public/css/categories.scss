@@ -1,56 +1,86 @@
 @import "utils";
 
-.categories{
-  &-banner{
-    @include wh(100%,400px);
+.categories {
+
+  &-banner {
+    @include wh(100%, 400px);
     @include allMidBox();
     background: url("/images/material-8.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     //background-position-y: -50px;
-    &-text{
+    &-text {
       width: 100%;
       position: relative;
-      .iconBox{
+      .iconBox {
         @include allMidBox();
-        i{
-          @include fontSizeColor(80px,#fff)
+        i {
+          @include fontSizeColor(80px, #fff)
         }
       }
     }
-    .musk{
-      @include wh(100%,100%);
+    .musk {
+      @include wh(100%, 100%);
       //background: rgba(12,12,12,.4);
     }
-    .categoriesTitle{
+    .categoriesTitle {
       font-weight: 300;
-      @include fontSizeColor(43px,#fff);
+      @include fontSizeColor(43px, #fff);
 
     }
-    .categoriesSubTitle{
+    .categoriesSubTitle {
       margin-top: -16px;
       font-weight: 600;
       @include fontSizeColor(28px, #ffffff)
     }
   }
-  &-item{
+  &-item {
+    text-decoration: none;
+    overflow: hidden;
     @include allMidBox();
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
     margin-top: 30px;
     margin-bottom: 20px;
-    height: 180px;
+    height: 260px;
     border-radius: 6px;
     background: #d1d0ca;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    &-title{
+    &-title {
       z-index: 999;
-      @include fontSizeColor(30px,#fff)
+      @include fontSizeColor(24px, #fff)
     }
-    .dark-overlay{
+
+    .icon-hover {
+      opacity: 0;
+      @include wh(100%, 100%);
+      position: absolute;
+      z-index: 997;
+      .dot {
+        transition: transform  .2s;
+        border-radius: 100%;
+        float: left;
+        @include wh(33.3%, 33.3%);
+        background: #FB8C00;
+      }
+    }
+
+    .icon-hover:hover{
+      .dot {
+        //-webkit-transform: scale(.6);
+        transform: scale(1.6);
+      }
+    }
+    .cateIcon {
+      margin-bottom: 12px;
+      z-index: 999;
+      @include fontSizeColor(40px, #fff)
+    }
+    /*it's a musk */
+    .dark-overlay {
       position: absolute;
       left: 0;
       top: 0;
@@ -65,10 +95,12 @@
       text-shadow: none;
     }
   }
-  &-cateBox{
-    //margin-top: 50px;
+
+  /*行为*/
+  &-item:hover {
+    .icon-hover{
+      opacity: 1;
+    }
   }
 }
 
-
-/*独立样式*/
