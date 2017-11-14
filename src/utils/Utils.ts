@@ -42,6 +42,14 @@ class CUtils {
         }
     }
 
+    static searchCateInfo(cateName:string,cateObj:object):object{
+        for(let i of Object.keys(cateObj)){
+            if (cateObj[i].pathName == cateName){
+                return cateObj[i]
+            }
+        }
+    }
+
 }
 
 export default CUtils

@@ -46,6 +46,8 @@
         text-decoration: none;
       }
       a{
+        @include allMidBox();
+        @include wh(100%,100%);
         @include fontSizeColor(14px, #768088);
       }
     }

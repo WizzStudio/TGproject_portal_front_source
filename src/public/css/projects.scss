@@ -1,0 +1,28 @@
+.projects{
+  &-banner{
+    @include wh(100%,300px);
+    @include allMidBox();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    &-text {
+      @include fontSizeColor(20px,#fff);
+      width: 100%;
+      position: relative;
+    }
+    .musk {
+      @include wh(100%, 100%);
+      background: rgba(12,12,12,.4);
+    }
+    .projectsTitle {
+      font-weight: 300;
+      @include fontSizeColor(43px, #fff);
+
+    }
+    .projectsSubTitle {
+      margin-top: -16px;
+      font-weight: 600;
+      @include fontSizeColor(28px, #ffffff)
+    }
+  }
+}

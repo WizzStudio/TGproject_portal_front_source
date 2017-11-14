@@ -73,6 +73,7 @@ let tempData = {
                 total: 48
             },
             leader: 'shitman',
+            tag:[]
         },
         {
             pic: '/images/bg13.png',
@@ -194,7 +195,7 @@ app.get('/categories', (req, res) => {
     res.render('categories', {active: 'categories',categories:categories})
 });
 app.get('/categories/:cate', (req, res) => {
-    res.render('projects', {active: 'categories',cate:req.params.cate})
+    res.render('projects', {active: 'categories',cateInfo:CUtil.searchCateInfo(req.params.cate,categories)})
 });
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department'})
