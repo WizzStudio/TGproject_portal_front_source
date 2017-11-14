@@ -158,8 +158,8 @@ app.get('/broadcast', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('home', tempData)
 });
-app.get('/projects', (req, res) => {
-    res.render('projects', {active: 'projects'})
+app.get('/categories', (req, res) => {
+    res.render('categories', {active: 'categories'})
 });
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department'})

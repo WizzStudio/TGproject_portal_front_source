@@ -1,0 +1,30 @@
+@import "utils";
+
+.categories{
+  &-banner{
+    @include wh(100%,400px);
+    @include allMidBox();
+    background: url("/images/material-8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -50px;
+    &-text{
+      width: 100%;
+      position: relative;
+    }
+    .musk{
+      @include wh(100%,100%);
+      //background: rgba(12,12,12,.4);
+    }
+    .categoriesTitle{
+      font-weight: 300;
+      @include fontSizeColor(43px,#fff);
+
+    }
+    .categoriesSubTitle{
+      margin-top: -16px;
+      font-weight: 600;
+      @include fontSizeColor(28px, #ffffff)
+    }
+  }
+}

@@ -10,6 +10,14 @@
     &-text{
       width: 100%;
       position: relative;
+      .fa-cubes{
+        margin-top: -100px;
+        display: block;
+        @include fontSizeColor(160px,$orange)
+      }
+      .iconBox{
+        @include allMidBox();
+      }
     }
     .musk{
       @include wh(100%,100%);
@@ -29,7 +37,6 @@
     width: 100%;
     &-item{
       @include allMidBox();
-
       height: 40px;
       border: solid $border;
       border-width: 0 1px 1px 0;
@@ -68,9 +75,15 @@
 
   .home{
     &-banner{
+      height: 400px;
       &-text{
         width: 200px;
         position: relative;
+        .fa-cubes{
+          margin-top: 0;
+          display: block;
+          @include fontSizeColor(90px,$orange)
+        }
       }
       .homeTitle{
         display: block;
@@ -79,6 +92,13 @@
       .homeSubTitle{
         margin-top: 20px;
         @include fontSizeColor(18px, #ffffff)
+      }
+    }
+    &-nav{
+      &-item{
+        a{
+          @include fontSizeColor(12px, #768088);
+        }
       }
     }
   }
