@@ -73,7 +73,7 @@ let tempData = {
                 total: 48
             },
             leader: 'shitman',
-            tag:[]
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         },
         {
             pic: '/images/bg13.png',
@@ -87,6 +87,7 @@ let tempData = {
                 total: 48
             },
             leader: 'fuckman',
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         },
         {
             pic: '/images/bg13.png',
@@ -100,6 +101,7 @@ let tempData = {
                 total: 48
             },
             leader: 'fuckman',
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         },
         {
             pic: '/images/bg13.png',
@@ -113,6 +115,7 @@ let tempData = {
                 total: 48
             },
             leader: 'fuckman',
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         },
         {
             pic: '/images/bg13.png',
@@ -126,6 +129,7 @@ let tempData = {
                 total: 48
             },
             leader: 'fuckman',
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         },
         {
             pic: '/images/bg13.png',
@@ -139,6 +143,7 @@ let tempData = {
                 total: 48
             },
             leader: 'fuckman',
+            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
         }
     ]
 }
@@ -147,34 +152,121 @@ let categories = [
     {
         name: '进行中',
         picURL: '/images/material-14.png',
-        pathName:'inprogress'
+        pathName: 'inprogress'
     },
     {
         name: '已完成',
         picURL: '/images/material-10.png',
-        pathName:'finished'
+        pathName: 'finished'
     },
     {
         name: '精品陈列',
         picURL: '/images/material-6.png',
-        pathName:'best'
+        pathName: 'best'
     },
     {
         name: '创意',
         picURL: '/images/material-11.png',
-        pathName:'creative'
+        pathName: 'creative'
     },
     {
         name: '微项目',
         picURL: '/images/material-16.png',
-        pathName:'tinny'
+        pathName: 'tinny'
     },
     {
         name: '闲逛',
         picURL: '/images/material-3.png',
-        pathName:'hangout'
+        pathName: 'hangout'
     },
 ]
+
+let cateProjs = [
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于Win8的新一代应用平台',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'shitman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于人工智能的图片识别技术',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'fuckman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于人工智能的图片识别技术',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'fuckman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于人工智能的图片识别技术',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'fuckman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于人工智能的图片识别技术',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'fuckman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/bg13.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于人工智能的图片识别技术',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'fuckman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    }
+    ]
 
 /**
  * express get to render configuration
@@ -192,10 +284,10 @@ app.get('/home', (req, res) => {
     res.render('home', tempData)
 });
 app.get('/categories', (req, res) => {
-    res.render('categories', {active: 'categories',categories:categories})
+    res.render('categories', {active: 'categories', categories: categories})
 });
 app.get('/categories/:cate', (req, res) => {
-    res.render('projects', {active: 'categories',cateInfo:CUtil.searchCateInfo(req.params.cate,categories)})
+    res.render('projects', {active: 'categories', cateInfo: CUtil.searchCateInfo(req.params.cate, categories),cateProjs:cateProjs})
 });
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department'})
@@ -206,8 +298,6 @@ app.get('/contact', (req, res) => {
 // app.get('/test/:id', (req, res) => {
 //     res.render('home')
 // });
-
-
 
 
 /**

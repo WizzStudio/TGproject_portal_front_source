@@ -6,3 +6,6 @@ block content
 			.musk
 				p.text-center.projectsTitle #{cateInfo.name}
 				p.text-center.projectsSubTitle TG工作室旗下项目分类
+	.container.projects-cont
+		- for(var i=0; i<cateProjs.length;i++)
+				include components/cateProjItem
