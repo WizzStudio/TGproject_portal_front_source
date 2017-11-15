@@ -183,7 +183,7 @@ let categories = [
 
 let cateProjs = [
     {
-        pic: '/images/bg13.png',
+        pic: '/images/a2.png',
         intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
         title: '基于Win8的新一代应用平台',
         startTime: CUtil.ms2Date(1510558487737),
@@ -197,7 +197,7 @@ let cateProjs = [
         tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
     },
     {
-        pic: '/images/bg13.png',
+        pic: '/images/a2.png',
         intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
         title: '基于人工智能的图片识别技术',
         startTime: CUtil.ms2Date(1510558487737),
@@ -211,7 +211,21 @@ let cateProjs = [
         tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
     },
     {
-        pic: '/images/bg13.png',
+        pic: '/images/a2.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于Win8的新一代应用平台',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'shitman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/a2.png',
         intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
         title: '基于人工智能的图片识别技术',
         startTime: CUtil.ms2Date(1510558487737),
@@ -225,7 +239,21 @@ let cateProjs = [
         tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
     },
     {
-        pic: '/images/bg13.png',
+        pic: '/images/a2.png',
+        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+        title: '基于Win8的新一代应用平台',
+        startTime: CUtil.ms2Date(1510558487737),
+        progress: {
+            front: 65,
+            back: 40,
+            pm: 50,
+            total: 48
+        },
+        leader: 'shitman',
+        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+    },
+    {
+        pic: '/images/a2.png',
         intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
         title: '基于人工智能的图片识别技术',
         startTime: CUtil.ms2Date(1510558487737),
@@ -239,9 +267,9 @@ let cateProjs = [
         tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
     },
     {
-        pic: '/images/bg13.png',
+        pic: '/images/a2.png',
         intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于人工智能的图片识别技术',
+        title: '基于Win8的新一代应用平台',
         startTime: CUtil.ms2Date(1510558487737),
         progress: {
             front: 65,
@@ -249,23 +277,9 @@ let cateProjs = [
             pm: 50,
             total: 48
         },
-        leader: 'fuckman',
+        leader: 'shitman',
         tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
     },
-    {
-        pic: '/images/bg13.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于人工智能的图片识别技术',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'fuckman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    }
     ]
 
 /**

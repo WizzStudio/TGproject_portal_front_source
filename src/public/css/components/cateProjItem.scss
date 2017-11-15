@@ -1,0 +1,74 @@
+@import "../utils";
+
+.cateProjItem{
+
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius:6px;
+  border: 1px solid $border;
+    &-banner{
+      cursor: pointer;
+      height: 200px;
+      background-size: cover;
+      background-position: 50%,50%;
+    }
+  &-info{
+    cursor: pointer;
+    padding: 6px;
+    height: 100px;
+    //background: #2e2e2e;
+    &-title{
+      @include fontSizeColor(16px,$fontClr_1st)
+    }
+    &-intro{
+      @include fontSizeColor(12px,$fontClr_2nd)
+    }
+  }
+  &-progress{
+    border: solid $border;
+    border-width:  0px 0px 1px 0px;
+    padding: 6px;
+    height: 160px;
+    .title{
+      @include fontSizeColor(16px,$fontClr_1st);
+      display: block;
+      width: 60%;
+    }
+
+    .cateProgress{
+      background: #048548;
+    }
+    .cateProgressMain{
+      margin-bottom: 10px;
+    }
+    .total{
+      background: #04bb62;
+    }
+    .front{
+      background: #e55b18;
+    }
+    .back{
+      background: #286bd4;
+    }
+    .ui{
+      background: #e33924;
+    }
+  }
+  &-usr{
+    padding: 20px 10px;
+    height: 60px;
+    &-title{
+      @include fontSizeColor(16px,lighten($fontClr_1st,10%));
+      font-weight: 400;
+    }
+    &-time{
+      margin-top: 20px;
+      @include fontSizeColor(12px,$fontClr_2nd);
+    }
+  }
+  .box{
+    display: flex;
+    justify-content:space-between;
+  }
+}
