@@ -1,0 +1,31 @@
+@import "../utils";
+
+.member{
+  padding: 0;
+  border-radius: 4px;
+  &-avatar{
+    width: 100%;
+    background-size: cover;
+    background-position: 50%,50%;
+    @include allMidBox();
+    img{
+      @include wh(100%,100%);
+    }
+    height: 140px;
+  }
+  .caption{
+    h3{
+      margin-top: 0;
+    }
+    .intro{
+      @include fontSizeColor(14px,#3b3b3b);
+      font-weight: 400;
+    }
+  }
+  .tagBox{
+    padding: 6px;
+    .mTag{
+      margin-left: 10px;
+    }
+  }
+}

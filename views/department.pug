@@ -27,5 +27,34 @@ block content
 					p.intro 代码仓库存储
 
 	.department-section.container
+		.page-header.department-section-header
+			h1 技术部
+				small Technology Dept.
+			.row
+					-for(let i of groups.develop)
+						.col-lg-4
+							include components/memberItem
+			p.more.text-center ...
+			p.more-text.text-center 等待你的加入
+	.department-section.container
+		.page-header.department-section-header
+			h1 产品部
+				small Products Dept.
+			.row
+				-for(let i of groups.product)
+					.col-lg-4
+						include components/memberItem
+			p.more.text-center ...
+			p.more-text.text-center 等待你的加入
+	.department-section.container
+		.page-header.department-section-header
+			h1 设计部
+				small Design Dept.
+			.row
+				-for(let i of groups.design)
+					.col-lg-4
+						include components/memberItem
+			p.more.text-center ...
+			p.more-text.text-center 等待你的加入
 
 
