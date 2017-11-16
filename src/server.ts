@@ -312,6 +312,225 @@ let projInfo={
     tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
 }
 
+/*成员介绍*/
+let groups={
+    product:[
+        {
+            gid:2,
+            name:'沙砼',
+            sex:1,
+            department:'dev', // dev pm ui
+            intro:'产品部大三, 负责TG工作室产品策划活动等 。 曾梦想一手漂亮代码走遍天下，不料半路走上了产品狗的不归路。爱好广泛，喜爱各种球类运动，喜欢美剧，电影，摄影等。对军事，国际政治，经济有挺大兴趣',
+            nowProject:{
+                pid:1,
+                pic: '/images/a1.png',
+                intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                title: '基于Win8的新一代应用平台',
+                startTime: CUtil.ms2Date(1510558487737),
+                progress: {
+                    front: 65,
+                    back: 40,
+                    pm: 50,
+                    total: 48
+                },
+                leader: 'shitman',
+                tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+            },
+            historyProject:[
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                }
+            ],
+            tags:['单身可撩']
+        },
+        {
+            gid:2,
+            name:'高炜',
+            sex:1,
+            department:'dev', // dev pm ui
+            intro:'TG工作室联合创始人，产品部负责人，学习产品策划一年，擅长需求分析，市场评估，有较为丰富的产品设计经验。曾担任一点研习社社群运营，瑞森客户管理系统总设计，“项慕吧”产品负责人，“flag酱”产品策划，“辰星天智”比赛平台产品设计。两次参加“互联网+”创新创业大赛，获"校一等奖"两次，“省银奖”一次。',
+            nowProject:{
+                pid:1,
+                pic: '/images/a1.png',
+                intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                title: '基于Win8的新一代应用平台',
+                startTime: CUtil.ms2Date(1510558487737),
+                progress: {
+                    front: 65,
+                    back: 40,
+                    pm: 50,
+                    total: 48
+                },
+                leader: 'shitman',
+                tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+            },
+            historyProject:[
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                }
+            ],
+            tags:['产品策划','总设计']
+        }
+    ],
+    develop:[
+        {
+            gid:1,
+            name:'游朝阳',
+            sex:1,
+            department:'dev', // dev pm ui
+            intro:'Keep It Super Simple',
+            nowProject:{
+                pid:1,
+                pic: '/images/a1.png',
+                intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                title: '基于Win8的新一代应用平台',
+                startTime: CUtil.ms2Date(1510558487737),
+                progress: {
+                    front: 65,
+                    back: 40,
+                    pm: 50,
+                    total: 48
+                },
+                leader: 'shitman',
+                tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+            },
+            historyProject:[
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                },
+                {
+                    pid:1,
+                    pic: '/images/a1.png',
+                    intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
+                    title: '基于Win8的新一代应用平台',
+                    startTime: CUtil.ms2Date(1510558487737),
+                    progress: {
+                        front: 65,
+                        back: 40,
+                        pm: 50,
+                        total: 48
+                    },
+                    leader: 'shitman',
+                    tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+                }
+            ],
+            tags:['敏捷开发','只用JQuery','键盘只有Ctrl,C,V']
+        }
+    ],
+    design:[]
+}
+
 /**
  * express get to render configuration
  */
@@ -337,7 +556,7 @@ app.get('/project/:id', (req, res) => {
     res.render('projectInfo', {active: 'categories',cateProjs:cateProjs})
 });
 app.get('/department', (req, res) => {
-    res.render('department', {active: 'department'})
+    res.render('department', {active: 'department',groups:groups})
 });
 app.get('/contact', (req, res) => {
     res.render('contact', {active: 'contact'})
