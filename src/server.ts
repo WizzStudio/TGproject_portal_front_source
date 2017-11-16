@@ -333,6 +333,9 @@ app.get('/categories', (req, res) => {
 app.get('/categories/:cate', (req, res) => {
     res.render('projects', {active: 'categories', cateInfo: CUtil.searchCateInfo(req.params.cate, categories),cateProjs:cateProjs})
 });
+app.get('/project/:id', (req, res) => {
+    res.render('projectInfo', {active: 'categories',cateProjs:cateProjs})
+});
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department'})
 });
