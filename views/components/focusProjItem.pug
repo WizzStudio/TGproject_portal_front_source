@@ -1,12 +1,15 @@
-- var picURL = "background:url('"+focusProjects[i].pic+"');"
+// 焦点项目模板
+- var props = focusProjects[i]
+- var picURL = "background:url('"+props.pic+"');"
 
-.focusProjItem
-	.focusProjItem-pic(style=picURL)
-	.focusProjItem-main
-		p.focusProjItem-main-title #{focusProjects[i].title}
-		p.focusProjItem-main-intro #{focusProjects[i].intro}
-	.focusProjItem-author
-		span #{focusProjects[i].leader}
-		span #{focusProjects[i].startTime.month}/#{focusProjects[i].startTime.date}/#{focusProjects[i].startTime.year}
+a(href=`project/${props.pid}`)
+	.focusProjItem
+		.focusProjItem-pic(style=picURL)
+		.focusProjItem-main
+			p.focusProjItem-main-title #{props.title}
+			p.focusProjItem-main-intro #{props.intro}
+		.focusProjItem-author
+			span #{props.leader}
+			span #{props.startTime.month}/#{props.startTime.date}/#{props.startTime.year}
 
 

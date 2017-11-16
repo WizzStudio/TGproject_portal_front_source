@@ -29,4 +29,15 @@
   &-cont{
     margin-top: 30px;
   }
+
+  /*查出项目list为0*/
+  &-empty{
+    margin-top: 40px;
+    @include allMidBox();
+    @include fontSizeColor(16px,#b3b3b3);
+    font-weight: 200;
+    i{
+      font-size: 80px;
+    }
+  }
 }

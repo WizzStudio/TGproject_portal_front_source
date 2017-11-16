@@ -1,5 +1,7 @@
 extends layout
 
+
+//- 进入具体的分类里的项目模板
 block content
 	.projects-banner(style="background-image:url('" + cateInfo.picURL + "');")
 		.projects-banner-text
@@ -7,16 +9,21 @@ block content
 				p.text-center.projectsTitle #{cateInfo.name}
 				p.text-center.projectsSubTitle TG工作室旗下项目分类
 	.container.projects-cont
-		- for(var i=0;i<Math.ceil(cateProjs.length/3);i++)
-			.row
-				- if(i<Math.floor(cateProjs.length/3))
-					- for(var j=0;j<3;j++)
-							.col-lg-4
+		if cateProjs.length>0
+			- for(var i=0;i<Math.ceil(cateProjs.length/3);i++)
+				.row
+					- if(i<Math.floor(cateProjs.length/3))
+						- for(var j=0;j<3;j++)
+								.col-lg-4
+									include components/cateProjItem
+					- else
+						- for(var j=0;j<cateProjs.length-3*i;j++)
+							div(class=`col-lg-${12/(cateProjs.length-(3*i))}`)
 								include components/cateProjItem
-				- else
-					- for(var j=0;j<cateProjs.length-3*i;j++)
-						div(class=`col-lg-${12/(cateProjs.length-(3*i))}`)
-							include components/cateProjItem
+		else
+			.projects-empty
+				i.fa.fa-battery-empty
+				p 暂时没有项目
 	br
 	br
 	br
