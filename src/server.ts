@@ -10,7 +10,7 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 import expressValidator = require("express-validator");
 import CUtil from './utils/Utils'
-import {getMemberById} from './request/apis'
+import {getAllMember, getMemberById} from './request/apis'
 
 /**
  * express server
@@ -678,7 +678,7 @@ let groups={
             name:'游朝阳',
             avatar:'/images/avatar1.svg',
             sex:1,
-            department:'/images/avatar1.svg', // dev pm ui
+            department:'dev', // dev pm ui
             intro:'Keep It Super Simple',
             nowProject:{
                 pid:1,
@@ -751,9 +751,6 @@ let groups={
 /**
  * express get to render configuration
  */
-// app.param('id',(req,res,next,id)=>{
-//     next()
-// })
 app.get('/', (req, res) => {
     res.render('home', tempData)
 });
@@ -766,28 +763,33 @@ app.get('/home', (req, res) => {
 app.get('/categories', (req, res) => {
     res.render('categories', {active: 'categories', categories: categories})
 });
-app.get('/categories/:cate', (req, res) => {
-    res.render('projects', {active: 'categories', cateInfo: CUtil.searchCateInfo(req.params.cate, categories),cateProjs:cateProjs})
-});
-app.get('/project/:id', (req, res) => {
-    res.render('projectInfo', {active: 'categories',cateProjs:cateProjs})
-});
 app.get('/department', (req, res) => {
     res.render('department', {active: 'department',groups:groups})
 });
 app.get('/contact', (req, res) => {
     res.render('contact', {active: 'contact'})
 });
-app.get('/testapi', (req, res) => {
-    getMemberById(1).then((res)=>{
-        console.log(typeof res)
-    })
 
-    // res.render('contact', {active: 'contact'})
+/* query by especial id*/
+app.get('/categories/:cate', (req, res) => {
+    res.render('projects', {active: 'categories', cateInfo: CUtil.searchCateInfo(req.params.cate, categories),cateProjs:cateProjs})
 });
-// app.get('/test/:id', (req, res) => {
-//     res.render('home')
-// });
+app.get('/project/:id', (req, res) => {
+    res.render('projectInfo', {active: 'categories',cateProjs:cateProjs})
+});
+
+
+
+
+
+
+/*testapi*/
+app.get('/testapi', (req, res) => {
+    getAllMember().then((data)=>{
+        res.render('testapi',{data:data})
+        res.end()
+    })
+});
 
 
 /**

@@ -13,7 +13,6 @@ export default (method: string = "GET", url: string = '', data?: object, headers
     // })
 
     if (method.toUpperCase() == 'GET') {
-
         return new Promise((resolve, reject) => {
             request({
                 url: _url,
@@ -21,9 +20,8 @@ export default (method: string = "GET", url: string = '', data?: object, headers
                 headers: headers,
             }, (err, res, body) => {
                 if (!err && res.statusCode == 200) {
-                    resolve(body)
+                    resolve(JSON.parse(body))
                 } else {
-                    console.log(err)
                     reject({
                         error: err,
                         msg: res.statusMessage
