@@ -56,10 +56,20 @@ class CUtils {
 
     /*http 请求失败后的错误处理*/
     static errorHandle(err,res):void{
-        if(/5*/.test(err.code)){
+        if (!err.code){
+            /*请求没有得到响应*/
             res.render('serverError')
-            bugLog(`java Server Error:${err.code}`)
+            bugLog(`java Server Error:${err.error}`)
+        }else {
+            if(/5*/.test(err.code)){
+                res.render('serverError')
+                bugLog(`java Server Error:${err.code}`)
+            }
         }
+
+
+
+
         /*下面可做扩展*/
     }
 

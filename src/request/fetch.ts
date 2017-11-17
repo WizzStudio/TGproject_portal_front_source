@@ -20,14 +20,24 @@ export default (method: string = "GET", url: string = '', data?: object, headers
                 headers: headers,
             }, (err, res, body) => {
                 if (!err && res.statusCode == 200) {
+                    /*请求正常响应*/
                     resolve(JSON.parse(body))
                 } else {
-                    reject({
-                        error: err,
-                        msg: res.statusMessage,
-                        code:res.statusCode,
-                        url:res.url
-                    })
+                    if (err && !res) {
+                        /*请求未响应*/
+                        reject({
+                            error:err.code
+                        })
+                    }
+                    else {
+                        /*请求响应被拒绝*/
+                        reject({
+                            error: err.code,
+                            msg: res.statusMessage,
+                            code: res.statusCode,
+                            url: res.url
+                        })
+                    }
                 }
             })
         })

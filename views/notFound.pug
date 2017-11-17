@@ -2,4 +2,11 @@ extends layout
 
 //- not found 模板
 block content
-	p1 not found
+	.errorBox(style="\t\tmargin-top: 200px;\n" +
+	"\t\tdisplay: flex;\n" +
+	"\t\tjustify-content: center;\n" +
+	"\t\talign-items: center;")
+		i.fa.fa-hand-o-up(style="font-size:100px;display=block")
+	br
+	h4.text-center 大家熟知的 404 NOT FOUND
+	p.text-center 点击上方选择栏选择我们提供的页面
