@@ -1,0 +1,21 @@
+class Project{
+    id:number
+    pic:string
+    intro:string
+    title:string
+    startTime:number
+    endTime:number
+    frontProgress:number
+    backProgress:number
+    UIProgress:number
+    totalProgress:number
+    leader:number
+    employees:object
+    cates:object
+    points:[{
+        id:number
+        name:string
+        intro:string
+        deadTime:number
+    }]
+}

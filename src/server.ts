@@ -786,7 +786,8 @@ app.get('/project/:id', (req, res) => {
 /*testapi*/
 app.get('/testapi', (req, res) => {
     getAllMember().then((data)=>{
-        res.render('testapi',{data:data})
+        // res.render('testapi',{data:data})
+        res.redirect('/home')
         res.end()
     })
 });

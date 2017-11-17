@@ -32,6 +32,7 @@
   &-section{
     padding: 40px 0px 40px 0px;
     &-header{
+      border-bottom: 1px solid $border;
       margin-bottom: 40px;
       &-icon{
         @include allMidBox();
