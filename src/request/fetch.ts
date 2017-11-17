@@ -24,7 +24,9 @@ export default (method: string = "GET", url: string = '', data?: object, headers
                 } else {
                     reject({
                         error: err,
-                        msg: res.statusMessage
+                        msg: res.statusMessage,
+                        code:res.statusCode,
+                        url:res.url
                     })
                 }
             })

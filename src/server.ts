@@ -10,7 +10,8 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 import expressValidator = require("express-validator");
 import CUtil from './utils/Utils'
-import {getAllMember, getMemberById} from './request/apis'
+import eventEmitter from './utils/EventEmitter'
+
 
 /**
  * express server
@@ -30,129 +31,6 @@ app.use(bodyParser.urlencoded({extended: false}));  // for application/x-www-for
 app.use(express.static(path.join(__dirname, "public"), {maxAge: 31557600000})); // 使用express静态转发，/js将转发到/public/js
 app.use(expressValidator());
 
-
-/*首页数据渲染*/
-let tempData = {
-    active: 'home',
-    newProjects: [
-        {
-            pid:1,
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于Win8的新一代应用平台',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'shitman',
-        },
-        {
-            pid:2,
-            pic: '/images/bg13.png',
-            intro: '人类误判心理学——21种常见心理倾向',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-        }
-    ],
-    focusProjects: [
-        {
-            pid:1,
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于Win8的新一代应用平台',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'shitman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        },
-        {
-            pid:2,
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        },
-        {
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        },
-        {
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        },
-        {
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        },
-        {
-            pic: '/images/bg13.png',
-            intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-            title: '基于人工智能的图片识别技术',
-            startTime: CUtil.ms2Date(1510558487737),
-            progress: {
-                front: 65,
-                back: 40,
-                pm: 50,
-                total: 48
-            },
-            leader: 'fuckman',
-            tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-        }
-    ]
-}
 
 /*分类页面渲染*/
 let categories = [
@@ -748,24 +626,35 @@ let groups={
     design:[]
 }
 
+/* controller*/
+import * as projectController from './controllers/project'
+import * as memberController from './controllers/member'
+
+
+
 /**
  * express get to render configuration
  */
-app.get('/', (req, res) => {
-    res.render('home', tempData)
-});
+app.get('/',projectController.homeProjHandler);
 app.get('/broadcast', (req, res) => {
     res.render('broadcast', {active: 'broadcast'})
 });
-app.get('/home', (req, res) => {
-    res.render('home', tempData)
-});
+
+// app.get('/home', (req, res) => {
+//     res.render('home', tempData)
+// });
+
+app.get('/home',projectController.homeProjHandler);
+
 app.get('/categories', (req, res) => {
     res.render('categories', {active: 'categories', categories: categories})
 });
-app.get('/department', (req, res) => {
-    res.render('department', {active: 'department',groups:groups})
-});
+
+// app.get('/categories', (req, res) => {
+//     res.render('categories', {active: 'categories', categories: categories})
+// });
+
+app.get('/department', memberController.allMemberHandler);
 app.get('/contact', (req, res) => {
     res.render('contact', {active: 'contact'})
 });
@@ -785,11 +674,6 @@ app.get('/project/:id', (req, res) => {
 
 /*testapi*/
 app.get('/testapi', (req, res) => {
-    getAllMember().then((data)=>{
-        // res.render('testapi',{data:data})
-        res.redirect('/home')
-        res.end()
-    })
 });
 
 

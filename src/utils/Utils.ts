@@ -50,6 +50,13 @@ class CUtils {
         }
     }
 
+    static errorHandle(err,res):void{
+        if(err.code == 500){
+            res.render('serverError')
+        }
+        /*下面可做扩展*/
+    }
+
 }
 
 export default CUtils
