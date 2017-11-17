@@ -1,3 +1,5 @@
+import bugLog from './debugLogger'
+
 class CUtils {
     constructor() {
 
@@ -51,8 +53,10 @@ class CUtils {
     }
 
     static errorHandle(err,res):void{
-        if(err.code == 500){
+        if(/5*/.test(err.code)){
             res.render('serverError')
+            console.log("java Server Error:"+err.code)
+            bugLog(`java Server Error:${err.code}`)
         }
         /*下面可做扩展*/
     }

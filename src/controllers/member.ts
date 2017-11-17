@@ -13,9 +13,9 @@ const allMemberHandler = (req,res)=>{
         }
     }
 
+    /*获取全部成员接口*/
     getAllMember()
         .then((data)=>{
-            console.log(data)
             res.render('/department',_renderData)
         })
         .catch((err)=>{
