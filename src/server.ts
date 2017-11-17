@@ -10,6 +10,7 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 import expressValidator = require("express-validator");
 import CUtil from './utils/Utils'
+import {getMemberById} from './request/apis'
 
 /**
  * express server
@@ -776,6 +777,13 @@ app.get('/department', (req, res) => {
 });
 app.get('/contact', (req, res) => {
     res.render('contact', {active: 'contact'})
+});
+app.get('/testapi', (req, res) => {
+    getMemberById(1).then((res)=>{
+        console.log(typeof res)
+    })
+
+    // res.render('contact', {active: 'contact'})
 });
 // app.get('/test/:id', (req, res) => {
 //     res.render('home')

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs", // 模块管理语法
-    "target": "es5", // 编译后语言版本
+    "target": "es2015", // 编译后语言版本
     "sourceMap": true,
     "outDir":"dist", //输出目录
     "baseUrl": "."
