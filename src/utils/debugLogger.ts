@@ -1,9 +1,7 @@
 import * as fs from 'fs'
 
 const bugLog = (errString:string) => {
-
     let error_data = `****************************************${new Date()}**********************\n${errString}\n`
-
     fs.stat('./bugLog.txt', (err, data) => {
         if (err) {
             if (err.errno == -2) {
@@ -29,13 +27,9 @@ const bugLog = (errString:string) => {
                 if (err) {
                     console.log(err)
                 }
-
             })
         }
-
     })
-
-
 }
 
 

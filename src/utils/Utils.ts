@@ -5,6 +5,7 @@ class CUtils {
 
     }
 
+    /*ms时间转换为日期对象*/
     static ms2Date(msTime:number):object {
         let _tempDate = new Date(msTime)
         const monthFilter = (month) => {
@@ -44,6 +45,7 @@ class CUtils {
         }
     }
 
+    /*根据类别名查询改类别下的数据*/
     static searchCateInfo(cateName:string,cateObj:object):object{
         for(let i of Object.keys(cateObj)){
             if (cateObj[i].pathName == cateName){
@@ -52,10 +54,10 @@ class CUtils {
         }
     }
 
+    /*http 请求失败后的错误处理*/
     static errorHandle(err,res):void{
         if(/5*/.test(err.code)){
             res.render('serverError')
-            console.log("java Server Error:"+err.code)
             bugLog(`java Server Error:${err.code}`)
         }
         /*下面可做扩展*/
