@@ -4,9 +4,81 @@ extends home
 
 block content
 	- var props=projInfo
-	- var picURL = "background:url('"+props.pic+"');"
-	.projectInfo-banner
+	- var members=projMembers
+	- var picURL = "background-image:url("+props.picUrl+");"
+	-
+	.projectInfo-banner(style=picURL)
+		.projectInfo-banner-text
+			.musk
+				p.projInfoTitle #{props.projectName}
+				.tags
+					- for(let item of props.categories)
+						sapn.projInfoSubTitle #{item.description}
 	.projectInfo-timeBar
-	.projectInfo-Info
-	.projectInfo-member
+		.container
+			.row
+				.col-lg-4.projectInfo-timeBar-start
+					p.title.text-center 开始时间
+					p.month.text-center #{props.startDate.month},
+						span.date #{props.startDate.date}
+					p.year.text-center #{props.startDate.year}
+				.col-lg-4.projectInfo-timeBar-to
+					p TO
+				.col-lg-4.projectInfo-timeBar-end
+					p.title.text-center 结束时间
+						p.month.text-center #{props.finishedDate.month},
+							span.date #{props.finishedDate.date}
+						p.year.text-center #{props.finishedDate.year}
+	.projectInfo-Info.container
+		i.fa.fa-cubes.projectInfo-icon
+		span.projectInfo-title 项目名:
+		p.projName.projectInfo-cont #{props.projectName}
+
+		i.fa.fa-info.projectInfo-icon
+		span.projectInfo-title 项目简介:
+		p.projName.projectInfo-cont #{props.introduction}
+
+		i.fa.fa-github.projectInfo-icon
+		span.projectInfo-title 仓库地址:
+		a(href=props.sourceUrl).projName.projectInfo-cont #{props.sourceUrl}
+
+		i.fa.fa-tag.projectInfo-icon
+		span.projectInfo-title 标签和分类:
+		- for(let item of props.categories)
+			sapn.projName.projectInfo-tag #{item.description}
+
+		br
+		br
+		br
+		i.fa.fa-hourglass-3.projectInfo-icon
+		span.projectInfo-title 进度:
+
+		.progress.projInfoProgressMain
+			.progress-bar.projInfoProgress.total(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.totalProgress + "%") 总进度： #{props.totalProgress}%
+		.progress.projInfoProgressMain
+			.progress-bar.projInfoProgress.front(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.frontProgress + "%") 前端进度： #{props.frontProgress}%
+		.progress.projInfoProgressMain
+			.progress-bar.projInfoProgress.back(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.backProgress + "%") 后端进度： #{props.backProgress}%
+		.progress.projInfoProgressMain
+			.progress-bar.projInfoProgress.ui(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.uiprogress + "%") UI进度： #{props.uiprogress}%
+
+
+		i.fa.fa-user.projectInfo-icon
+		span.projectInfo-title 项目领导者:
+		p.projName.projectInfo-cont #{leaderName}
+
+		i.fa.fa-group.projectInfo-icon
+		span.projectInfo-title 开发者们:
+	.projectInfo-member.container
+		.row
+			-for(let i of members)
+				.col-lg-4.col-sm-6
+					include components/memberItem
 	.projectInfo-progress
+
+
+	br
+	br
+	br
+	br
+	br

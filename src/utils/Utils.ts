@@ -73,6 +73,26 @@ class CUtils {
         /*下面可做扩展*/
     }
 
+    /*遍历取出项目领导人*/
+    static findLeader(leaderId:number,members:any):string{
+        for (let item of members){
+            if (leaderId == item.id){
+                return item.username
+            }
+        }
+    }
+
+    static cateFilter(cateString:string):number{
+        switch (cateString){
+            case 'inprogress': return 1;
+            case 'finished': return 2;
+            case 'best': return 3;
+            case 'creative': return 4;
+            case 'tinny': return 5;
+            case 'hangout': return 6;
+        }
+    }
+
 }
 
 export default CUtils

@@ -6,7 +6,7 @@
     @include allMidBox();
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 40%;
+    background-position: 50% 50%;
     &-text {
       @include fontSizeColor(20px,#fff);
       width: 100%;
@@ -17,22 +17,98 @@
       @include wh(100%, 300px);
       background: rgba(12,12,12,.4);
     }
-    .departTitle {
+    .projInfoTitle {
       font-weight: 300;
       @include fontSizeColor(43px, #fff);
 
     }
-    .departSubTitle {
+    .projInfoSubTitle {
+      margin-left: 10px;
       margin-top: -10px;
       font-weight: 600;
-      @include fontSizeColor(28px, #ffffff)
+      @include fontSizeColor(18px, #ffffff)
     }
-    .departNumber{
-      margin-top: -20px;
-      @include fontSizeColor(60px, #ffffff);
-      span{
-        @include fontSizeColor(18px,#fff)
-      }
+    .tags{
+
     }
   }
+  &-timeBar{
+    border-bottom: 1px solid $border;
+    padding-top: 40px;
+    &-start{
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+    }
+    &-to{
+      height: 200px;
+      @include allMidBox();
+      @include fontSizeColor(30px,$font-1st);
+    }
+    &-end{}
+    .title{
+      @include fontSizeColor(30px,$font-1st);
+      font-weight: 300;
+    }
+    .month{
+      @include fontSizeColor(40px,$font-2nd);
+      font-weight: 600;
+    }
+    .date{}
+    .year{
+      @include fontSizeColor(40px,$font-2nd);
+      font-weight: 300;
+    }
+  }
+  &-Info{
+    padding: 20px;
+    min-height: 200px;
+
+    .projInfoProgress{
+
+    }
+    .projInfoProgressMain{
+      margin-top: 20px;
+    }
+    .total{
+      background: #048548;
+    }
+    .front{
+      background: #e55b18;
+    }
+    .back{
+      background: #286bd4;
+    }
+    .ui{
+      background: #e33924;
+    }
+  }
+
+
+  &-icon{
+    @include fontSizeColor(30px,$font-1st)
+  }
+  &-title{
+    margin-left: 20px;
+    @include fontSizeColor(18px,$font-1st);
+    font-weight: 300;
+  }
+  a:hover{
+    color: $font-2nd!important;
+  }
+  &-cont{
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 60px;
+    @include fontSizeColor(22px,$font-1st);
+    font-weight: 300;
+    border-bottom: 1px solid $border;
+  }
+  &-tag{
+    margin-left: 20px;
+    @include fontSizeColor(16px,$font-2nd);
+    font-weight: 300;
+  }
+
 }

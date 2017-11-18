@@ -36,12 +36,13 @@ const getProjectById = (id)=>{
 }
 
 const getProjectByCate = (categroy)=>{
-    return fetch('get',`/TGProject/project/${categroy}`,{},{})
+    return fetch('get',`/TGProject/category/${categroy}`,{},{})
 }
 
 export {
     getMemberById,
     getMemberByName,
     getAllMember,
-    getProjectById
+    getProjectById,
+    getProjectByCate
 }
