@@ -1,19 +1,19 @@
 // props.intro
 
 - var props = newProjects[i]
-- var picURL = "background:url('"+props.pic+"');"
+- var picURL = "background-image:url("+props.picUrl+");"
 
 
-a(href=`project/${props.pid}`)
+a(href=`project/${props.id}`)
 	.newProjItem
 		.newProjItem-pic(style=picURL)
 			.newProjItem-pic-info
 				.newProjItem-pic-info-text
-					p #{props.title}
+					p #{props.projectName}
 				.newProjItem-pic-info-text
-					p.intro #{props.intro}
+					p.intro #{props.introduction}
 				.newProjItem-pic-info-text
-					p.intro #{props.startTime.month}, #{props.startTime.date} #{props.startTime.year}
-					p #{props.leader}
+					p.intro #{props.startDate.month}, #{props.startDate.date} #{props.startDate.year}
+					p #{props.leaderName}
 
 

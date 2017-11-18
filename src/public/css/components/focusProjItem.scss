@@ -6,9 +6,11 @@
   height: 300px;
   margin-bottom: 20px;
   background: #ffffff;
+
   border: 1px solid lighten($border,6%);
   border-radius: 6px ;
   &-pic{
+    background-position: 50%,50%;
     height: 150px;
   }
   &-main{
