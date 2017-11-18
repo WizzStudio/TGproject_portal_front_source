@@ -59,7 +59,7 @@ class CUtils {
         if (!err.code){
             /*请求没有得到响应*/
             res.render('serverError')
-            bugLog(`java Server Error:${err.error}`)
+            bugLog(`java Server Error:${err.res}`)
         }else {
             if(/5*/.test(err.code)){
                 res.render('serverError')

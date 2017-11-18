@@ -1,15 +1,20 @@
 
 
 - var props =i
-- var randomList = ['default','primary','success','info','warning','default','primary','success','info','warning']
+- var randomList = ['default','primary','success','info','warning','default','primary','danger','info','warning']
 
 .thumbnail.member
 	.member-avatar(style="background-image:url('" + '/images/material-16.png' + "')")
-		img(src=props.avatar)
+		img(src=props.avatar || "/images/avatar2.svg")
 	.caption
-		h3 #{props.name}
-		p.intro #{props.intro}
-
+		h3 #{props.name || "该成员很神秘，不透露姓名"}
+		p.intro #{props.intro|| "该成员很神秘，没有自我介绍"}
+		- if (props.sex === 0)
+			p.fa.fa-female.text-center
+				span.age #{props.age || "该成员很神秘，不透露年龄"}
+		-else
+			p.fa.fa-male.center-block
+				span.age #{props.age || "该成员很神秘，不透露年龄"}
 	.tagBox
 		- for(let i of props.tags)
 			.label.mTag(class=`label-${randomList[Math.floor(Math.random(5) * 10)]}`) #{i}

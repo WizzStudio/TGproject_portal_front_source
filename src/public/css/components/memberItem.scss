@@ -7,10 +7,11 @@
     width: 100%;
     background-size: cover;
     background-position: 50%,50%;
+    overflow: hidden;
     @include allMidBox();
     img{
-      padding:  20px ;
-      @include wh(100%,100%);
+      border-radius: 6px;
+      @include wh(100px,100px);
     }
     height: 140px;
   }
@@ -21,6 +22,16 @@
     .intro{
       @include fontSizeColor(14px,#3b3b3b);
       font-weight: 400;
+    }
+    .fa-female{
+      @include fontSizeColor(20px, #ff7088);
+    }
+    .fa-male{
+      @include fontSizeColor(20px, #1fc0da);
+    }
+    .age{
+      font-size: 16px;
+      margin-left: 10px;
     }
   }
   .tagBox{

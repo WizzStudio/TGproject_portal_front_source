@@ -6,7 +6,7 @@ import  fetch from './fetch'
  * @returns {Promise<object>}
  */
 const getMemberById=(id)=>{
-    return fetch('get',`/TGProject/employeeId/${id}`,{},{})
+    return fetch('get',`/TGProject/memberId/${id}`,{},{})
 }
 
 /**
@@ -15,7 +15,7 @@ const getMemberById=(id)=>{
  * @returns {Promise<object>}
  */
 const getMemberByName=(name)=>{
-    return fetch('get',`/TGProject/employeeName/${name}`,{},{})
+    return fetch('get',`/TGProject/memberName/${name}`,{},{})
 }
 
 /**
@@ -23,7 +23,7 @@ const getMemberByName=(name)=>{
  * @returns {Promise<object>}
  */
 const getAllMember = ()=>{
-    return fetch('get',`/TGProject/employees`,{},{})
+    return fetch('get',`/TGProject/members`,{},{})
 }
 
 

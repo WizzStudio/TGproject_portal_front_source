@@ -28,6 +28,13 @@
       font-weight: 600;
       @include fontSizeColor(28px, #ffffff)
     }
+    .departNumber{
+      margin-top: -20px;
+      @include fontSizeColor(60px, #ffffff);
+      span{
+        @include fontSizeColor(18px,#fff)
+      }
+    }
   }
   &-section{
     padding: 40px 0px 40px 0px;
@@ -45,7 +52,6 @@
           font-weight: 200;
         }
       }
-
       h1{
         @include fontSizeColor(40px,$fontClr_1st);
         font-weight: 200;
