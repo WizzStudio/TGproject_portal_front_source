@@ -16,8 +16,9 @@
 			p.fa.fa-male.center-block
 				span.age #{props.age || "该成员很神秘，不透露年龄"}
 	.tagBox
-		- for(let i of props.tags)
-			.label.mTag(class=`label-${randomList[Math.floor(Math.random(5) * 10)]}`) #{i}
+		- if (props.tags)
+			- for(let i of props.tags)
+				.label.mTag(class=`label-${randomList[Math.floor(Math.random(5) * 10)]}`) #{i}
 
 	//.panel.panel-primary
 	//	.panel-heading 历史项目
