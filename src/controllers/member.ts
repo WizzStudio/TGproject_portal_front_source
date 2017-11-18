@@ -2,7 +2,7 @@ import CUtil from '../utils/Utils'
 import {getAllMember, getMemberById} from '../request/apis'
 
 
-/*部门简介页面 获取全部用户*/
+/* C1: 部门简介页面 获取全部用户*/
 const allMemberHandler = (req, res) => {
     let _renderData = {
         active: 'department', // header的active
@@ -11,7 +11,7 @@ const allMemberHandler = (req, res) => {
             develop: [],
             design: []
         }, // 人员渲染数据
-        memberCount: 0,
+        memberCount: 0
     }
     let _memberInfo = {
         id: 0,
@@ -26,6 +26,7 @@ const allMemberHandler = (req, res) => {
     /*获取全部成员接口*/
     getAllMember()
         .then((data) => {
+            // console.log(data.length)
             _renderData.memberCount = data.length
             for (let item of data) {
                 /*数据绑定

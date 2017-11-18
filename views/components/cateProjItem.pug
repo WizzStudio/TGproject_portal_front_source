@@ -1,24 +1,24 @@
 //- 各个分类item下面项目的模板
 - var props = cateProjs[3*i+j]
-a(href=`/project/${props.pid}`)
+a(href=`/project/${props.id}`)
 	.cateProjItem
-		.cateProjItem-banner(style="background-image:url('" + props.pic + "')")
+		.cateProjItem-banner(style="background-image:url('" + props.picUrl + "')")
 		.cateProjItem-info
-			p.cateProjItem-info-title #{props.title}
-			p.cateProjItem-info-intro #{props.intro}
+			p.cateProjItem-info-title #{props.projectName}
+			p.cateProjItem-info-intro #{props.introduction}
 		.cateProjItem-progress
 			p.title 项目进度
 			.progress.cateProgressMain
-				.progress-bar.cateProgress.total(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:"+props.progress.total+"%") 总进度： #{props.progress.total}%
+				.progress-bar.cateProgress.total(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:"+props.totalProgress+"%") 总进度： #{props.totalProgress}%
 			.progress.cateProgressMain
-				.progress-bar.cateProgress.front(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.progress.front + "%") 前端进度： #{props.progress.front}%
+				.progress-bar.cateProgress.front(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.frontProgress + "%") 前端进度： #{props.frontProgress}%
 			.progress.cateProgressMain
-				.progress-bar.cateProgress.back(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.progress.back + "%") 后端进度： #{props.progress.back}%
+				.progress-bar.cateProgress.back(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.backProgress + "%") 后端进度： #{props.backProgress}%
 			.progress.cateProgressMain
-				.progress-bar.cateProgress.ui(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.progress.pm + "%") UI进度： #{props.progress.pm}%
+				.progress-bar.cateProgress.ui(role="progressbar" aria-valuenow='20' aria-valuemin='0' aria-valuemax='100',style="width:" + props.uiprogress+ "%") UI进度： #{props.uiprogress}%
 
 		.cateProjItem-usr
 			.box
 				p.cateProjItem-usr-title 项目负责人： #{props.leader}
-				p.cateProjItem-usr-time 截止时间 #{props.startTime.month},#{props.startTime.year},#{props.startTime.date}
+				p.cateProjItem-usr-time 截止时间 #{props.startDate.month},#{props.startDate.year},#{props.startDate.date}
 

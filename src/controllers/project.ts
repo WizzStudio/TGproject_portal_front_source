@@ -1,5 +1,5 @@
 /*有关项目的控制器*/
-import {getAllMember, getMemberById} from '../request/apis'
+import {getAllMember, getMemberById, getProjectById} from '../request/apis'
 import CUtil from '../utils/Utils'
 
 /*首页数据渲染*/
@@ -163,109 +163,108 @@ let categories = [
 /*分类进入二级页面渲染*/
 let cateProjs = [
     {
-        pid:1,
-        pic: '/images/a1.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于Win8的新一代应用平台',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'shitman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+        "id": 1,
+        "projectName": "吴忠二手车",
+        "leaderId": 1,
+        "startDate": 1511280000000,
+        "finishedDate": 1511884800000,
+        "members": [
+            {
+                "id": 1,
+                "username": "DBT",
+                "college": "软件学院",
+                "departmentId": 1,
+                "projectId": 1,
+                "avatar": "dbt@qq.com",
+                "introduction": "我是一直大白兔",
+                "tag": "[\"活泼\",\"可爱\",\"蛤蟆皮\"]",
+                "gender": 1,
+                "age": 20
+            },
+            {
+                "id": 5,
+                "username": "刘旭阳",
+                "college": "软件工程",
+                "departmentId": 1,
+                "projectId": 1,
+                "avatar": "localhost",
+                "introduction": "我是一个小小",
+                "tag": "[\"龟儿哈狗\",\"mmmp\"]",
+                "gender": 1,
+                "age": 20
+            }
+        ],
+        "sourceUrl": "jaosdfjasdfoaisjdf",
+        "frontProgress": 33,
+        "backProgress": 44,
+        "totalProgress": 88,
+        "introduction": "静态图片展示",
+        "picUrl": "http://dysmorsel.oss-cn-beijing.aliyuncs.com/TG/1.png\r\n",
+        "categories": [
+            {
+                "id": 1,
+                "description": "进行中",
+                "projects": null
+            },
+            {
+                "id": 3,
+                "description": "精品",
+                "projects": null
+            }
+        ],
+        "uiprogress": 22
     },
     {
-        pid:2,
-        pic: '/images/a2.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于人工智能的图片识别技术',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'fuckman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    },
-    {
-        pid:3,
-        pic: '/images/a3.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于Win8的新一代应用平台',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'shitman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    },
-    {
-        pid:4,
-        pic: '/images/a3.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于人工智能的图片识别技术',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'fuckman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    },
-    {
-        pid:5,
-        pic: '/images/a2.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于Win8的新一代应用平台',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'shitman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    },
-    {
-        pid:6,
-        pic: '/images/a1.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于人工智能的图片识别技术',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'fuckman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
-    },
-    {
-        pid:7,
-        pic: '/images/a4.png',
-        intro: 'Win8是Window通用平台开发平台的起点，Win8是Window通用平台开发平台的起点',
-        title: '基于Win8的新一代应用平台',
-        startTime: CUtil.ms2Date(1510558487737),
-        progress: {
-            front: 65,
-            back: 40,
-            pm: 50,
-            total: 48
-        },
-        leader: 'shitman',
-        tags: ['inprogress', 'finished', 'best', 'creative', 'tinny', 'hangout']
+        "id": 1,
+        "projectName": "吴忠二手车",
+        "leaderId": 1,
+        "startDate": 1511280000000,
+        "finishedDate": 1511884800000,
+        "members": [
+            {
+                "id": 1,
+                "username": "DBT",
+                "college": "软件学院",
+                "departmentId": 1,
+                "projectId": 1,
+                "avatar": "dbt@qq.com",
+                "introduction": "我是一直大白兔",
+                "tag": "[\"活泼\",\"可爱\",\"蛤蟆皮\"]",
+                "gender": 1,
+                "age": 20
+            },
+            {
+                "id": 5,
+                "username": "刘旭阳",
+                "college": "软件工程",
+                "departmentId": 1,
+                "projectId": 1,
+                "avatar": "localhost",
+                "introduction": "我是一个小小",
+                "tag": "[\"龟儿哈狗\",\"mmmp\"]",
+                "gender": 1,
+                "age": 20
+            }
+        ],
+        "sourceUrl": "jaosdfjasdfoaisjdf",
+        "frontProgress": 33,
+        "backProgress": 44,
+        "totalProgress": 88,
+        "introduction": "静态图片展示",
+        "picUrl": "http://dysmorsel.oss-cn-beijing.aliyuncs.com/TG/1.png\r\n",
+        "categories": [
+            {
+                "id": 1,
+                "description": "进行中",
+                "projects": null
+            },
+            {
+                "id": 3,
+                "description": "精品",
+                "projects": null
+            }
+        ],
+        "uiprogress": 22
     },
 ]
 
@@ -721,6 +720,60 @@ let groups={
     design:[]
 }
 
+/*单个项目的数据模板*/
+let tempProj={
+    "id": 1,
+    "projectName": "吴忠二手车",
+    "leaderId": 1,
+    "startDate": 1511280000000,
+    "finishedDate": 1511884800000,
+    "members": [
+        {
+            "id": 1,
+            "username": "DBT",
+            "college": "软件学院",
+            "departmentId": 1,
+            "projectId": 1,
+            "avatar": "dbt@qq.com",
+            "introduction": "我是一直大白兔",
+            "tag": "[\"活泼\",\"可爱\",\"蛤蟆皮\"]",
+            "gender": 1,
+            "age": 20
+        },
+        {
+            "id": 5,
+            "username": "刘旭阳",
+            "college": "软件工程",
+            "departmentId": 1,
+            "projectId": 1,
+            "avatar": "localhost",
+            "introduction": "我是一个小小",
+            "tag": "[\"龟儿哈狗\",\"mmmp\"]",
+            "gender": 1,
+            "age": 20
+        }
+    ],
+    "sourceUrl": "jaosdfjasdfoaisjdf",
+    "frontProgress": 33,
+    "backProgress": 44,
+    "totalProgress": 88,
+    "introduction": "静态图片展示",
+    "picUrl": "http://dysmorsel.oss-cn-beijing.aliyuncs.com/TG/1.png\r\n",
+    "categories": [
+        {
+            "id": 1,
+            "description": "进行中",
+            "projects": null
+        },
+        {
+            "id": 3,
+            "description": "精品",
+            "projects": null
+        }
+    ],
+    "uiprogress": 22
+}
+
 
 
 /*C1: 获取首页数据 */
@@ -740,7 +793,12 @@ const cateProjHandler = (req,res)=>{
 
 /*C4: 项目详情页 */
 const projHandler = (req,res)=>{
-     res.render('projectInfo', {active: 'categories',cateProjs:cateProjs})
+    getProjectById(req.params.id).then((data)=>{
+        console.log(data)
+    }).catch((err) => {
+            CUtil.errorHandle(err, res)
+        })
+     res.render('projectInfo', {active: 'categories',projInfo:cateProjs})
 }
 
 export {

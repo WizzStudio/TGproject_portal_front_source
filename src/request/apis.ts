@@ -26,9 +26,22 @@ const getAllMember = ()=>{
     return fetch('get',`/TGProject/members`,{},{})
 }
 
+/**
+ * 根据id查询项目
+ * @param id
+ * @returns {Promise<Project>}
+ */
+const getProjectById = (id)=>{
+    return fetch('get',`/TGProject/project/${id}`,{},{})
+}
+
+const getProjectByCate = (categroy)=>{
+    return fetch('get',`/TGProject/project/${categroy}`,{},{})
+}
 
 export {
     getMemberById,
     getMemberByName,
-    getAllMember
+    getAllMember,
+    getProjectById
 }

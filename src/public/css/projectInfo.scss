@@ -1,0 +1,38 @@
+@import "./utils";
+
+.projectInfo{
+  &-banner{
+    @include wh(100%,300px);
+    @include allMidBox();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 40%;
+    &-text {
+      @include fontSizeColor(20px,#fff);
+      width: 100%;
+      position: relative;
+    }
+    .musk {
+      @include allMidBox();
+      @include wh(100%, 300px);
+      background: rgba(12,12,12,.4);
+    }
+    .departTitle {
+      font-weight: 300;
+      @include fontSizeColor(43px, #fff);
+
+    }
+    .departSubTitle {
+      margin-top: -10px;
+      font-weight: 600;
+      @include fontSizeColor(28px, #ffffff)
+    }
+    .departNumber{
+      margin-top: -20px;
+      @include fontSizeColor(60px, #ffffff);
+      span{
+        @include fontSizeColor(18px,#fff)
+      }
+    }
+  }
+}
