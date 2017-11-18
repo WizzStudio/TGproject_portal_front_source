@@ -845,6 +845,7 @@ const projHandler = (req, res) => {
     getProjectById(req.params.id)
         .then((data)=>{
             // console.log(data)
+            /*TDDO: 1.首页数据渲染 2. 替换图片为cdn*/
 
             data.startDate = CUtil.ms2Date(data.startDate)
             data.finishedDate = CUtil.ms2Date(data.finishedDate)
