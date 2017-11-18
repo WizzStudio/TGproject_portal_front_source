@@ -218,8 +218,8 @@ let cateProjs = [
         "id": 1,
         "projectName": "吴忠二手车",
         "leaderId": 1,
-        "startDate": 1511280000000,
-        "finishedDate": 1511884800000,
+        "startDate": CUtil.ms2Date(1511280000000),
+        "finishedDate": CUtil.ms2Date(1511884800000),
         "members": [
             {
                 "id": 1,
