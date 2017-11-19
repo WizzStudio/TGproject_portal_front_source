@@ -56,6 +56,7 @@ app.get('/project/:id', projectController.projHandler);
 
 /*testapi*/
 app.get('/testapi', (req, res) => {
+    res.render('notFound')
 });
 
 

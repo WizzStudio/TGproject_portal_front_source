@@ -35,6 +35,11 @@ const getProjectById = (id)=>{
     return fetch('get',`/TGProject/project/${id}`,{},{})
 }
 
+/**
+ * 根据分类查询项目
+ * @param categroy
+ * @returns {Promise<any>}
+ */
 const getProjectByCate = (categroy)=>{
     return fetch('get',`/TGProject/category/${categroy}`,{},{})
 }

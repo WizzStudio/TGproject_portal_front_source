@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": " concurrently -k -p \"[{name}]\" -n \"SCSS,TypeScript,Server\" -c \"magenta,green.bold,cyan.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve\"",
-    "serve": "PORT=4333 nodemon ./dist/server.js",
+    "serve": "PORT=4333 nodemon ./dist/server_portal.js",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "watch-sass": "node-sass -w src/public/css/main.scss dist/public/css/main.css",
