@@ -61,10 +61,15 @@ class CUtils {
             res.render('serverError')
             bugLog(`java Server Error:${err}`)
         }else {
+            if(/4*/.test(err.code)){
+                res.render('notFound')
+                bugLog(`java Server Error:${err.code}`)
+            }
             if(/5*/.test(err.code)){
                 res.render('serverError')
                 bugLog(`java Server Error:${err.code}`)
             }
+
         }
 
 
@@ -82,6 +87,7 @@ class CUtils {
         }
     }
 
+    /*分类id与string的映射*/
     static cateFilter(cateString:string):number{
         switch (cateString){
             case 'inprogress': return 1;

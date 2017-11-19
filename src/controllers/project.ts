@@ -686,7 +686,7 @@ const homeProjHandler = (req, res) => {
 
     getProjectByCate(1)
         .then((data)=>{
-            console.log(data)
+            // console.log(data)
             tempData.newProjects = data.projects
             for(let item of tempData.newProjects){
                 item['leaderName'] = CUtil.findLeader(item.leaderId,item.members)
