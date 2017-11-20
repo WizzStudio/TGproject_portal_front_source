@@ -5,11 +5,11 @@
 .DS_Store
 
 # Ignore built ts files
-dist/**/*
+# dist/**/*
 
 # Dependency directory
 node_modules
 
 # test log
-bugLog.txt
+#bugLog.txt
 
