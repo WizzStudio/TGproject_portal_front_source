@@ -77,7 +77,7 @@ V2.0.0会开发出后台模块,方便运营部管理增添项目信息和成员�
 
     - src/main 源代码
       - java应用代码
-         -  controller 匹配路由之后的controller
+        - controller 匹配路由之后的controller
         - dao 数据库访问接口
         - exception 自定义异常类
         - interceptor 自定义拦截器类
