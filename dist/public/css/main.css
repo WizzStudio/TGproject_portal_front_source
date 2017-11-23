@@ -8592,7 +8592,7 @@ template {
   flex-flow: nowrap column;
   justify-content: center;
   align-items: center;
-  background: url("/images/bg13.png");
+  background: url("/images/bg13.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
   .home-banner-text {
@@ -8692,7 +8692,7 @@ template {
     flex-flow: nowrap column;
     justify-content: center;
     align-items: center;
-    background: url("/images/material-8.png");
+    background: url("/images/material-8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%; }
@@ -8858,7 +8858,7 @@ template {
   flex-flow: nowrap column;
   justify-content: center;
   align-items: center;
-  background: url("/images/bg13.png");
+  background: url("/images/bg13.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
   .home-banner-text {
@@ -8950,7 +8950,7 @@ template {
     color: #768088; } }
 
 .department-banner {
-  background: url("/images/department.png");
+  background: url("/images/department.jpg");
   width: 100%;
   height: 300px;
   display: flex;

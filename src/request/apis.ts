@@ -32,7 +32,7 @@ const getAllMember = ()=>{
  * @returns {Promise<Project>}
  */
 const getProjectById = (id)=>{
-    return fetch('get',`/TGProject/project/${id}`,{},{})
+    return fetch('get',`/TGProject/projectId/${id}`,{},{})
 }
 
 /**

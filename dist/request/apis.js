@@ -33,7 +33,7 @@ exports.getAllMember = getAllMember;
  * @returns {Promise<Project>}
  */
 const getProjectById = (id) => {
-    return fetch_1.default('get', `/TGProject/project/${id}`, {}, {});
+    return fetch_1.default('get', `/TGProject/projectId/${id}`, {}, {});
 };
 exports.getProjectById = getProjectById;
 /**

@@ -15,32 +15,32 @@ let imgURL = 'http://dysmorsel.oss-cn-beijing.aliyuncs.com/TG';
 let categories = [
     {
         name: '进行中',
-        picURL: '/images/material-14.png',
+        picURL: '/images/material-14.jpg',
         pathName: 'inprogress'
     },
     {
         name: '已完成',
-        picURL: '/images/material-10.png',
+        picURL: '/images/material-10.jpg',
         pathName: 'finished'
     },
     {
         name: '精品陈列',
-        picURL: '/images/material-6.png',
+        picURL: '/images/material-6.jpg',
         pathName: 'best'
     },
     {
         name: '创意',
-        picURL: '/images/material-11.png',
+        picURL: '/images/material-11.jpg',
         pathName: 'creative'
     },
     {
         name: '微项目',
-        picURL: '/images/material-16.png',
+        picURL: '/images/material-16.jpg',
         pathName: 'tinny'
     },
     {
         name: '闲逛',
-        picURL: '/images/material-3.png',
+        picURL: '/images/material-3.jpg',
         pathName: 'hangout'
     },
 ];
@@ -781,7 +781,7 @@ const projHandler = (req, res) => {
             active: 'categories',
             projInfo: data,
             projMembers: projMembers,
-            leaderName: Utils_1.default.findLeader(tempProj.leaderId, tempProj.members)
+            leaderName: Utils_1.default.findLeader(data.leaderId, data.members)
         });
     })
         .catch((err) => {

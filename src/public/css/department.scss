@@ -2,7 +2,7 @@
 
 .department{
   &-banner{
-    background: url("/images/department.png");
+    background: url("/images/department.jpg");
     @include wh(100%,300px);
     @include allMidBox();
     background-repeat: no-repeat;
