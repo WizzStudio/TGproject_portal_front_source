@@ -13,3 +13,5 @@ node_modules
 # test log
 #bugLog.txt
 
+# auto scripts
+copyer.js
