@@ -27,6 +27,7 @@ app.use(expressValidator());
 /* controller*/
 const projectController = require("./controllers/project");
 const memberController = require("./controllers/member");
+const manageController = require("./controllers/managment");
 /**
  * express get to render configuration
  */
@@ -37,13 +38,14 @@ app.get('/broadcast', (req, res) => {
 app.get('/home', projectController.homeProjHandler);
 app.get('/categories', projectController.cateHandler);
 app.get('/department', memberController.allMemberHandler);
+app.get('/management', manageController.managePageHandler);
 app.get('/contact', (req, res) => { res.render('contact', { active: 'contact' }); });
 /* query by especial id*/
 app.get('/categories/:cate', projectController.cateProjHandler);
 app.get('/project/:id', projectController.projHandler);
 /*testapi*/
 app.get('/testapi', (req, res) => {
-    res.render('notFound');
+    res.render('management');
 });
 /**
  * 404 not found page

@@ -34,6 +34,7 @@ app.use(expressValidator());
 /* controller*/
 import * as projectController from './controllers/project'
 import * as memberController from './controllers/member'
+import * as manageController from './controllers/managment'
 
 
 
@@ -47,6 +48,7 @@ app.get('/broadcast', (req, res) => {
 app.get('/home',projectController.homeProjHandler);
 app.get('/categories',projectController.cateHandler);
 app.get('/department', memberController.allMemberHandler);
+app.get('/management', manageController.managePageHandler);
 app.get('/contact', (req, res) => {res.render('contact', {active: 'contact'})});
 
 /* query by especial id*/
@@ -56,7 +58,7 @@ app.get('/project/:id', projectController.projHandler);
 
 /*testapi*/
 app.get('/testapi', (req, res) => {
-    res.render('notFound')
+    res.render('management')
 });
 
 
