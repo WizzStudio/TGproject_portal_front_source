@@ -9,8 +9,6 @@ let tempData = {
     newProjects: [],
     focusProjects: []
 };
-/*images*/
-let imgURL = 'http://dysmorsel.oss-cn-beijing.aliyuncs.com/TG';
 /*分类页面渲染*/
 let categories = [
     {

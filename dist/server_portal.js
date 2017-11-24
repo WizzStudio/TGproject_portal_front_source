@@ -45,7 +45,7 @@ app.get('/categories/:cate', projectController.cateProjHandler);
 app.get('/project/:id', projectController.projHandler);
 /*testapi*/
 app.get('/testapi', (req, res) => {
-    res.render('management');
+    res.render('notfound');
 });
 /**
  * 404 not found page

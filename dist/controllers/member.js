@@ -20,7 +20,8 @@ const allMemberHandler = (req, res) => {
         intro: '',
         tags: [],
         sex: 0,
-        age: 0
+        age: 0,
+        departmentId: 0,
     };
     /*获取全部成员接口*/
     apis_1.getAllMember()
@@ -36,6 +37,7 @@ const allMemberHandler = (req, res) => {
             _memberInfo.intro = item.introduction;
             _memberInfo.sex = item.gender;
             _memberInfo.age = item.age;
+            _memberInfo.departmentId = item.departmentId;
             /*判断分别渲染*/
             for (let tag of JSON.parse(item.tag)) {
                 _memberInfo.tags.push(tag);
