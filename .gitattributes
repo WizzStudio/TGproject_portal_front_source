@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 *.js linguist-language=js  
 *.css linguist-language=js  
 *.html linguist-language=js  
+=======
+*.js linguist-language=javaScript
+*.css linguist-language=javaScript  
+*.html linguist-language=javaScript 
+>>>>>>> back
