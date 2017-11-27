@@ -36,6 +36,8 @@ import * as projectController from './controllers/project'
 import * as memberController from './controllers/member'
 import * as manageController from './controllers/managment'
 
+console.log('serving')
+
 
 
 /**

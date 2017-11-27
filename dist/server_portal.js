@@ -28,6 +28,7 @@ app.use(expressValidator());
 const projectController = require("./controllers/project");
 const memberController = require("./controllers/member");
 const manageController = require("./controllers/managment");
+console.log('serving');
 /**
  * express get to render configuration
  */
@@ -52,7 +53,7 @@ app.get('/testapi', (req, res) => {
  */
 app.get('*', (req, res) => {
     // res.end('fucking error');
-    res.render('notFound');
+    res.render('notfound');
 }); // 404处理
 /*error handle*/
 app.use(errorHandler());
