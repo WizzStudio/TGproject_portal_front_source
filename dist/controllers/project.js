@@ -744,7 +744,8 @@ const projHandler = (req, res) => {
         intro: '',
         tags: [],
         sex: 0,
-        age: 0
+        age: 0,
+        departmentId: 0,
     };
     let projMembers = [];
     apis_1.getProjectById(req.params.id)
@@ -760,6 +761,7 @@ const projHandler = (req, res) => {
             _memberInfo.intro = item.introduction;
             _memberInfo.sex = item.gender;
             _memberInfo.age = item.age;
+            _memberInfo.departmentId = item.departmentId;
             for (let tag of JSON.parse(item.tag)) {
                 _memberInfo.tags.push(tag);
             }
