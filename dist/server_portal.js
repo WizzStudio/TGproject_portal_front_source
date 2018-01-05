@@ -52,8 +52,7 @@ app.get('/testapi', (req, res) => {
  * 404 not found page
  */
 app.get('*', (req, res) => {
-    // res.end('fucking error');
-    res.render('notfound');
+    res.render('notFound');
 }); // 404处理
 /*error handle*/
 app.use(errorHandler());
